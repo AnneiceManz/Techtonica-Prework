@@ -117,9 +117,9 @@ console.log(pluck([{name:'Anneice', isMacOwner: true}, {name: 'Nicholas', isMacO
 function stringFromObject (obj) {
     let newString= ''
     for (let i in obj) {
-        newString += `${i} = ${obj[i]}, `
+        newString += `${i} = ${obj[i]}, ` 
     }
-    return newString.slice(0,-2)
+    return `"` + newString.slice(0,-2) + `"`
 }
  console.log(stringFromObject({a: 17, b: '18'}))
  console.log(stringFromObject({name: 'Anneice', job: 'Software engineer', likesSushi: true}))
